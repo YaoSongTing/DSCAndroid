@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 利用pust剩余运算符合并数组
+        // let a = [1,2,3,4]
+        // let b = [5,6,7,8]
+        // console.log(a);
+        // console.log(b);
+        // console.log(a.push(...b));
+        // console.log(a);
+
+        //数组扁平化
+        // const arr = [1,[2,[3,[4,5]]],6]
+        // console.log(arr);
+        //1、利用es6 flat()    方法
+        // const reslut = arr.flat(Infinity);
+        //2、利用正则  先转成字符串//把'['|']'替换成空的//利用,号分割//缺点数组里面的值是字符串类型的
+        // const reslut1 = JSON.stringify(arr).replace(/\[|\]/g,'').split(',')
+        //3、利用正则改良版  
+        // const res3 = JSON.parse('['+JSON.stringify(arr).replace(/\[|\]/g,'')+']')
+
+        // 4、利用reduce方法 +递归
+        // const flatten = arr=>{
+        //     return arr.reduce((pre,cur)=>{
+        //         return pre.concat(Array.isArray(cur)?flatten(cur):cur);
+        //     },[])
+        // }
+        // const res4 = flatten(arr)
+
+        // 5、函数递归
+        // const res5 = [];
+        // const fn = arr => {
+        //     for(let i = 0;i<arr.length;i++){
+        //         if(Array.isArray(arr[i])){
+        //             fn(arr[i])
+        //         }else{
+        //             res5.push(arr[i])
+        //         }
+        //     }
+        // }
+        // fn(arr)
+        // console.log(res5);
+
+        // 数组去重
+        const arr = [1,1,'1',17,true,true,false,false,'true','a',{},{}];
+        console.log(arr);
+        // 1、利用set 创建一个Set对象  然后用Array.from()  把对象或类数组对象转换成数组
+        // const res =Array.from(new  Set(arr)); 
+        // 2、两层for循环
+        // const unique = arr => {
+        //     let len =arr.length;
+        //     for(let i = 0;i<len;i++){
+        //         for(let j=i+1;j<len;j++){
+        //             if(arr[i]===arr[j]){
+        //                 arr.splice(j,1)
+        //                 j--
+        //                 len--
+        //             }
+        //         }
+        //     }
+        //     return arr
+        // }
+        // const res1 =  unique(arr)
+        // 3、利用indexOf
+        // const unipe2 = arr=>{
+        //     let res = [];
+        //     for(let i = 0 ;i<arr.length;i++){
+        //         if(res.indexOf(arr[i])=='-1'){
+        //             res.push(arr[i])
+        //         }
+        //     }
+        //     return res 
+        // }
+        // const res2 = unipe2(arr)
+        // 4、利用includes
+        // const unipe3 = arr=>{
+        //     let res =[];
+        //     for(let i = 0;i<arr.length;i++){
+        //         if(!res.includes(arr[i])){
+        //             res.push(arr[i])
+        //         }
+
+        
+        //     }
+        //     return res
+        // }
+        // const res3 = unipe3(arr)
+        // 5、利用filter
+        // const unipe4 = arr=>{
+        //     return arr.filter((item,index)=> arr.indexOf(item)===index)
+        // }
+        // const res4 = unipe4(arr)  
+        console.log(res4);
+    </script>
+</body>
+</html>
