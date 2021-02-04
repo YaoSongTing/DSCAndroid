@@ -59,7 +59,6 @@ const mutations = {
         localStorage.setItem('checkAll',state.checkAll)
     },
     changselect(state,data){
-        console.log(data);
         state.carts[data.index]=data.v
        let ischenk = state.carts.every(item=>item.isSelect==true)
 

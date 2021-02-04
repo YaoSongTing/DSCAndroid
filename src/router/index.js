@@ -17,6 +17,7 @@ import Cart from "../views/Cart/Cart"
 import Login from '../views/Login/Login'
 import Register from '../views/Register/Register'
 import GoodsList from '../views/GoodsList/GoodsList'
+import Demo from '../views/Demo/Demo'
 
 //配置首页的子组件
 import Index from '../views/Home/children/Index'
@@ -36,70 +37,73 @@ import SearchList from '../views/Search/SearchList'
 //详情页
 import DetailList from '../views/DetailList/DetailList'
 //配置路由
-const routes=[{
-    path:'/home',
-    name:'home',
-    component:Home,
-    children:[{
-        path:'index',
-        component:Index
-    },{
-        path:'ele',
-        component:Ele
-    },{
-        path:'person',
-        component:Person
-    },{
-        path:'box',
-        component:Box
-    },{
-        path:'phone',
-        component:Phone
-    },{
-        path:'computer',
-        component:Computer
-    },{
-        path:'house',
-        component:House
-    },{
-        path:'face',
-        component:Face
-    },{
-        path:'/home',
-        redirect:'/home/index'
+const routes = [{
+    path: '/home',
+    name: 'home',
+    component: Home,
+    children: [{
+        path: 'index',
+        component: Index
+    }, {
+        path: 'ele',
+        component: Ele
+    }, {
+        path: 'person',
+        component: Person
+    }, {
+        path: 'box',
+        component: Box
+    }, {
+        path: 'phone',
+        component: Phone
+    }, {
+        path: 'computer',
+        component: Computer
+    }, {
+        path: 'house',
+        component: House
+    }, {
+        path: 'face',
+        component: Face
+    }, {
+        path: '/home',
+        redirect: '/home/index'
     }]
-},{
-    path:'/mine',
-    name:'mine',
-    component:Mine
-},{
-    path:'/category/:cid',
-    name:'category',
-    component:Category,
-   
-},{
-    path:'/search',
-    name:'search',
-    component:Search
-},{
-    path:'/cart',
-    name:'Cart',
-    component:Cart
-},{
-    path:'/login',
-    component:Login
-},{
-    path:'/register',
-    component:Register
-},{
-    path:'/detaillist',
-    component:DetailList
-},{
-    path:'/searchlist',
-    component:SearchList
-},{
-    path:'/goodsList/:gid',
-    component:GoodsList
+}, {
+    path: '/mine',
+    name: 'mine',
+    component: Mine
+}, {
+    path: '/category/:cid',
+    name: 'category',
+    component: Category,
+
+}, {
+    path: '/search',
+    name: 'search',
+    component: Search
+}, {
+    path: '/cart',
+    name: 'Cart',
+    component: Cart
+}, {
+    path: '/login',
+    component: Login
+}, {
+    path: '/register',
+    component: Register
+}, {
+    path: '/detaillist',
+    component: DetailList
+}, {
+    path: '/searchlist',
+    component: SearchList
+}, {
+    path: '/goodsList/:gid',
+    component: GoodsList
+}, {
+    path: '/demo',
+    component: Demo
 }]
 
 

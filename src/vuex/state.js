@@ -11,7 +11,7 @@ const state ={
     SearchList:[],//搜索列表数据
     reqflay:false,//是否加载
     SwipeBackgtoundIndex:'',//首页轮播图背景 
-    searchHistory:localStorage['searchHistory']?JSON.parse(localStorage['searchHistory']):[],//购物车数据
+    searchHistory:localStorage['searchHistory']?JSON.parse(localStorage['searchHistory']):['暂无'],//购物车数据
 
     
 
